@@ -1,0 +1,137 @@
+.menu {
+  background: var(--color-bg-alt);
+}
+
+.eyebrow {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid de cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(230, 57, 70, 0.4);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagem placeholder do card */
+.cardImage {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(145deg, #1a1a1a 0%, #262626 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.cardImageIcon {
+  font-size: 4rem;
+  display: block;
+}
+
+.cardImageLabel {
+  font-size: 0.78rem;
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+/* Badge do card */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Conteúdo do card */
+.cardContent {
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.cardName {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--color-secondary);
+  white-space: nowrap;
+}
+
+.addBtn {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.addBtn:hover {
+  background: #c1121f;
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.45);
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
